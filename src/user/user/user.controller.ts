@@ -19,9 +19,9 @@ export class UserController {
   }
   @Get('/get-cookie')
   async getCookie(@Req() req: Request) {
-    const { name } = req.cookies;
+    const { username } = req.cookies;
     return {
-      message: `Hello ${name}`,
+      message: `Hello ${username}`,
     };
   }
   @Get('/:id')
